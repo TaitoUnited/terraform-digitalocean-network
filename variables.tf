@@ -25,3 +25,10 @@ variable "region" {
 variable "ip_range" {
   type = string
 }
+
+variable "network" {
+  type = object({
+    ipRange = string
+  })
+  description = "Resources as JSON (see README.md). You can read values from a YAML file with yamldecode()."
+}
